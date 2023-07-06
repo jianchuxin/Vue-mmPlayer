@@ -112,7 +112,6 @@ export default {
         this.currentMusic.id && this.currentMusic.image
           ? `url(${this.currentMusic.image}?param=300y300)`
           : `url(${MMPLAYER_CONFIG.BACKGROUND})`
-      console.log(url)
       return url
     },
     percentMusic() {
@@ -132,7 +131,6 @@ export default {
   },
   watch: {
     currentMusic(newMusic, oldMusic) {
-      console.log(this.picUrl)
       if (!newMusic.id) {
         this.lyric = []
         return

@@ -37,7 +37,6 @@ export default {
     },
     // 播放事件
     selectItem(item, index) {
-      console.log(111111)
       this.selectPlay({
         list: this.historyList,
         index
