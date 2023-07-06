@@ -131,6 +131,8 @@ export default {
     },
     // 播放暂停事件
     selectItem(item, index, e) {
+      console.log(22222)
+      console.log(this.currentMusic.id, item.id)
       if (e && /list-menu-icon-del/.test(e.target.className)) {
         return
       }

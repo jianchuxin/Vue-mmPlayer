@@ -26,6 +26,7 @@ export const selectPlay = function ({ commit }, { list, index }) {
   commit(types.SET_CURRENTINDEX, index)
   commit(types.SET_PLAYING, true)
 }
+
 // 选择播放（会插入一条到播放列表）
 export const selectAddPlay = function ({ commit, state }, music) {
   let list = [...state.playlist]
@@ -66,6 +67,7 @@ export const removerPlayListItem = function ({ commit, state }, { list, index })
     commit(types.SET_PLAYING, true)
   }
 }
+
 // 设置播放历史
 export const setHistory = function ({ commit }, music) {
   commit(types.SET_HISTORYLIST, setHistoryList(music))

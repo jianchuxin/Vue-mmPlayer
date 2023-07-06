@@ -108,9 +108,12 @@ export default {
   },
   computed: {
     picUrl() {
-      return this.currentMusic.id && this.currentMusic.image
-        ? `url(${this.currentMusic.image}?param=300y300)`
-        : `url(${MMPLAYER_CONFIG.BACKGROUND})`
+      const url =
+        this.currentMusic.id && this.currentMusic.image
+          ? `url(${this.currentMusic.image}?param=300y300)`
+          : `url(${MMPLAYER_CONFIG.BACKGROUND})`
+      console.log(url)
+      return url
     },
     percentMusic() {
       const duration = this.currentMusic.duration
@@ -129,6 +132,7 @@ export default {
   },
   watch: {
     currentMusic(newMusic, oldMusic) {
+      console.log(this.picUrl)
       if (!newMusic.id) {
         this.lyric = []
         return

@@ -10,7 +10,6 @@ export const VISITOR_BADGE_ID = process.env.VUE_APP_VISITOR_BADGE_ID
 /* 背景图（可引入网络图或本地静态图） */
 const requireAll = (requireContext) => requireContext.keys().map(requireContext)
 const BACKGROUNDS = requireAll(require.context('./assets/background', false))
-
 /**
  * 播放模式
  * LIST_LOOP: 列表循环

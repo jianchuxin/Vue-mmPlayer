@@ -13,6 +13,7 @@
         onerror="this.style.display='none'"
       />
     </h1>
+
     <dl class="user">
       <template v-if="user.userId">
         <router-link class="user-info" to="/music/userlist" tag="dt">
